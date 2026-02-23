@@ -1,0 +1,2 @@
+# Avoid setuptools 70+ so llvmlite's source build works (spawn/dry_run compatibility)
+setuptools<70

@@ -1,0 +1,33 @@
+# Pylint config for avatarify-python (legacy codebase; reduce noise)
+[MASTER]
+# Run from repo root or avatarify-python so imports resolve
+ignore=venv,.venv,__pycache__
+
+[MESSAGES CONTROL]
+# OpenCV: members are runtime; no-member is a false positive (also set per-file where needed)
+disable=
+    C0114,   # missing-module-docstring
+    C0116,   # missing-function-docstring
+    C0103,   # invalid-name (snake_case etc.)
+    C0301,   # line-too-long
+    C0303,   # trailing-whitespace
+    C0410,   # multiple-imports
+    C0411,   # wrong-import-order
+    C0209,   # consider-using-f-string
+    W0611,   # unused-import
+    W0612,   # unused-variable
+    W0613,   # unused-argument
+    W0621,   # redefined-outer-name
+    W0601,   # global-variable-undefined
+    W0602,   # global-variable-not-assigned
+    W0603,   # global-statement
+    W0604,   # global-at-module-level
+    W3101,   # missing-timeout (requests)
+    W1514,   # unspecified-encoding
+    W0702,   # bare-except
+
+[BASIC]
+good-names=i,j,k,f,e,_,id,fd,rw,rh,l,r,u,d,w,h,out
+
+[FORMAT]
+max-line-length=140

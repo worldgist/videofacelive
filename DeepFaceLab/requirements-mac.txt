@@ -1,0 +1,17 @@
+# DeepFaceLab dependencies for macOS (CPU only, no CUDA).
+# Use Python 3.8 or 3.9. Install: pip install -r requirements-mac.txt
+# Cython and numpy first so h5py can build. If h5py fails (e.g. "No module named 'Cython'"
+# in build), install it without build isolation: pip install --no-build-isolation h5py>=2.10,<3
+Cython
+numpy>=1.19,<1.25
+tqdm
+numexpr
+h5py>=2.10,<3
+opencv-python>=4.1,<4.6
+ffmpeg-python==0.1.17
+scikit-image>=0.14,<0.20
+scipy>=1.4,<1.11
+colorama
+tensorflow>=2.4,<2.11
+pyqt5
+tf2onnx>=1.9,<1.14
