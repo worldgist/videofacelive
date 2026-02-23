@@ -1,0 +1,13 @@
+{
+  "video_source": "deepfacelive",
+  "camera_index": 0,
+  "webcam_index": 0,
+  "deepfacelive_camera_index": 1,
+  "avatarify_camera_index": 1,
+  "custom_avatar_path": "/Applications/face-live/workspace/avatarify_custom/avatar.jpg",
+  "participant_sources": [
+    "deepfacelive",
+    "mirror"
+  ],
+  "participant_camera_index": 1
+}

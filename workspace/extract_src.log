@@ -1,0 +1,40 @@
+[wf] Face type ( f/wf/head ?:help ) : wf
+[0] Max number of faces from image ( ?:help ) : 0
+[512] Image size ( 256-2048 ?:help ) : 512
+[90] Jpeg quality ( 1-100 ?:help ) : 90
+[n] Write debug images to src_faces_debug? ( y/n ) : n
+Extracting faces...
+Running on CPU1
+Running on CPU2
+Running on CPU3
+Running on CPU4
+Running on CPU5
+Running on CPU0
+  0%|          | 0/1 [00:00<?, ?it/s]
+
+Error while processing data: Traceback (most recent call last):
+  File "/Applications/face-live/DeepFaceLab/core/joblib/SubprocessorBase.py", line 71, in _subprocess_run
+    result = self.process_data (data)
+  File "/Applications/face-live/DeepFaceLab/mainscripts/Extractor.py", line 101, in process_data
+    data = ExtractSubprocessor.Cli.rects_stage (data=data,
+  File "/Applications/face-live/DeepFaceLab/mainscripts/Extractor.py", line 145, in rects_stage
+    rects = data.rects = rects_extractor.extract (rotated_image, is_bgr=True)
+  File "/Applications/face-live/DeepFaceLab/facelib/S3FDExtractor.py", line 196, in extract
+    for ltrb in self.refine (olist):
+  File "/Applications/face-live/DeepFaceLab/facelib/S3FDExtractor.py", line 245, in refine
+    bboxlist = [ x[:-1].astype(np.int) for x in bboxlist if x[-1] >= 0.5]
+  File "/Applications/face-live/DeepFaceLab/facelib/S3FDExtractor.py", line 245, in <listcomp>
+    bboxlist = [ x[:-1].astype(np.int) for x in bboxlist if x[-1] >= 0.5]
+  File "/Applications/face-live/DeepFaceLab_venv/lib/python3.9/site-packages/numpy/__init__.py", line 305, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'int'.
+`np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+  0%|          | 0/1 [00:17<?, ?it/s]
+-------------------------
+Images found:        1
+Faces detected:      0
+-------------------------
+Done.

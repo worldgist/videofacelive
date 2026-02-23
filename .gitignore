@@ -1,0 +1,33 @@
+# Virtual environments
+.venv/
+venv/
+DeepFaceLab_venv/
+DeepFaceLive_venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project-specific (optional: uncomment to ignore)
+# workspace/model/
+# workspace/src_faces/
+# workspace/dst_faces/
+# *.log

@@ -1,0 +1,9 @@
+# Avatarify / FOMM config for face-live
+# Paths are relative to avatarify-python/
+
+fomm_config: fomm/config/vox-adv-256.yaml
+checkpoint: vox-adv-cpk.pth.tar
+
+# On Mac use client mode: python run.py --config avatarify.yaml --is-client --connect HOST
+is_client: false
+connect: ""

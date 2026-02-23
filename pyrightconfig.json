@@ -1,0 +1,6 @@
+{
+  "extraPaths": [
+    "avatarify-python",
+    "avatarify-python/fomm"
+  ]
+}
